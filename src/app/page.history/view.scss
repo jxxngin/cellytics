@@ -1,0 +1,21 @@
+.view {
+    flex-direction: column;
+
+    .button {
+        width: 100%;
+        margin-bottom: 20px;
+
+        .btn-outline {
+            vertical-align: middle;
+        }
+    }
+}
+
+.list {
+    overflow: auto;
+}
+
+td {
+    height: 60px;
+    vertical-align: middle;
+}

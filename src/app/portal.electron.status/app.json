@@ -1,0 +1,21 @@
+{
+    "mode": "portal",
+    "id": "portal.electron.status",
+    "title": "Status",
+    "namespace": "electron.status",
+    "viewuri": "",
+    "category": "",
+    "template": "wiz-portal-electron-status([title]=\"\")",
+    "ng.build": {
+        "id": "portal.electron.status",
+        "name": "PortalElectronStatusComponent",
+        "path": "./portal.electron.status/portal.electron.status.component"
+    },
+    "ng": {
+        "selector": "wiz-portal-electron-status",
+        "inputs": [
+            "title"
+        ],
+        "outputs": []
+    }
+}

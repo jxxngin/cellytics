@@ -1,0 +1,12 @@
+.underline-text-input-group
+    input.underline-text-input-field(
+        [type]="type",
+        [(ngModel)]="model",
+        (ngModelChange)="modelChange.emit(model)",
+        [placeholder]="label",
+        [disabled]="disabled",
+        autocomplete="off",
+        spellcheck="false",
+        (keydown.enter)="onEnter()",
+    )
+    label.underline-text-input-label(*ngIf="label") {{label}}

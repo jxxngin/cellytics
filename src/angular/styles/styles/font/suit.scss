@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'MAIN-B';
+    font-weight: 500;
+    src: local('SUIT Bold'),
+        url('image://font/SUIT/SUIT-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'MAIN-M';
+    font-weight: 500;
+    src: local('SUIT Medium'),
+        url('image://font/SUIT/SUIT-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'MAIN-N';
+    font-weight: 400;
+    src: local('SUIT Normal'),
+        url('image://font/SUIT/SUIT-Regular.ttf') format('truetype');
+}

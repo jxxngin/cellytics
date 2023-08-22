@@ -1,0 +1,24 @@
+{
+    "mode": "page",
+    "id": "page.setting",
+    "title": "/setting",
+    "namespace": "setting",
+    "viewuri": "/setting",
+    "category": "",
+    "preview": "/setting",
+    "controller": "",
+    "layout": "layout.aside",
+    "ng.build": {
+        "id": "page.setting",
+        "name": "PageSettingComponent",
+        "path": "./page.setting/page.setting.component"
+    },
+    "ng": {
+        "selector": "wiz-page-setting",
+        "inputs": [
+            "title"
+        ],
+        "outputs": []
+    },
+    "template": "wiz-page-setting([title]=\"\")"
+}

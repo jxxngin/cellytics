@@ -1,0 +1,21 @@
+{
+    "mode": "portal",
+    "id": "portal.electron.package.json",
+    "title": "package.json",
+    "namespace": "electron.package.json",
+    "viewuri": "",
+    "category": "",
+    "template": "wiz-portal-electron-package-json([title]=\"\")",
+    "ng.build": {
+        "id": "portal.electron.package.json",
+        "name": "PortalElectronPackageJsonComponent",
+        "path": "./portal.electron.package.json/portal.electron.package.json.component"
+    },
+    "ng": {
+        "selector": "wiz-portal-electron-package-json",
+        "inputs": [
+            "title"
+        ],
+        "outputs": []
+    }
+}

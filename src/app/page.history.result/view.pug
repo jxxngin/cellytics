@@ -1,0 +1,63 @@
+.page.h-100
+    wiz-component-logo(style="width: 100%;")
+
+    .view
+        .button
+            button.btn.btn-outline(routerLink="/history")
+                i.fa-solid.fa-chevron-left
+                span.ml-2 Back
+        
+        .result.mt-3
+            .title.mb-2
+                h2.ml-2.mb-0.col.text-left Result
+                button.btn.btn-none.mr-2.col-auto(routerLink="/history/detail")
+                    i.fa-solid.fa-chart-line
+                    span.ml-2 Detail
+
+            .h-100.mt-2.d-flex.align-items-center.justify-content-center
+                .col.result-detail
+                    .item(*ngFor="let item of result")
+                        .check
+                            i.fa-solid.fa-check
+                        span.ml-2 {{item.name}} -
+                        span.bold {{item.value}}
+                
+                .col.result-detail
+                    .item
+                        h2.mb-0 My NK count : 
+                        h2.mb-0.highlight GOOD
+                    .line
+                    
+                    .item(*ngFor="let item of count")
+                        .check
+                            i.fa-solid.fa-check
+                        span.ml-2 Same {{item.title}} group : 
+                        span.highlight top {{item.per}}%
+                    .blank
+                    .line
+                    
+                    .show
+                        .spectrum
+                            .point-top(style="left: 155px;") &#9660;
+                            .bar(style="left: 160px;")
+                            // .point-bottom(style="left: 155px;") &#9650;
+
+                .col.mr-0.result-detail
+                    .item
+                        h2.mb-0 My NK activity : 
+                        h2.mb-0.highlight EXCELLENT
+                    .line
+                    
+                    .item(*ngFor="let item of activity")
+                        .check
+                            i.fa-solid.fa-check
+                        span.ml-2 Same {{item.title}} group : 
+                        span.highlight top {{item.per}}%
+                    .blank
+                    .line
+                    
+                    .show
+                        .spectrum
+                            .point-top(style="left: 195px;") &#9660;
+                            .bar(style="left: 200px;")
+                            // .point-bottom(style="left: 195px;") &#9650;

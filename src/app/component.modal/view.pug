@@ -1,0 +1,19 @@
+.modal-view
+    .modal-view-header
+        .col
+            h3.title Edit Your Name
+        .col-auto
+            button.btn.btn-close
+    .modal-modal-view-body.flex-grow-1
+        .name
+            .col-md-3.d-flex.align-items-center
+                h4.mb-0 new NAME
+            .col 
+                input.form-control#input(
+                    type="text",
+                    [(ngModel)]="name",
+                    (keydown.enter)="edit(name)",
+                    placeholder="이름을 입력하세요",
+                )
+    .modal-view-footer
+        button.col-auto.btn.btn-none((click)="edit(name)") EDIT

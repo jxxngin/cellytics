@@ -1,0 +1,90 @@
+{
+  "name": "cellytics_nk",
+  "version": "1.0.0",
+  "main": "public/electron.js",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test",
+    "el:copy": "node src/libs/portal/electron/public/copy.js",
+    "el:dev": "electron .",
+    "el:start": "concurrently --kill-others-on-fail \"npm run el:copy\" \"npm run el:dev\"",
+    "el:build": "electron-builder"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^15.0.4",
+    "@angular/common": "^15.0.4",
+    "@angular/compiler": "^15.0.4",
+    "@angular/core": "^15.0.4",
+    "@angular/forms": "^15.0.4",
+    "@angular/localize": "^15.0.4",
+    "@angular/material": "^15.0.3",
+    "@angular/platform-browser": "^15.0.4",
+    "@angular/platform-browser-dynamic": "^15.0.4",
+    "@angular/router": "^15.0.4",
+    "@fortawesome/fontawesome-free": "^6.4.0",
+    "@ng-bootstrap/ng-bootstrap": "^14.2.0",
+    "@tabler/core": "^1.0.0-beta16",
+    "chart.js": "^4.2.0",
+    "concurrently": "^8.0.1",
+    "electron-is-dev": "^2.0.0",
+    "electron-squirrel-startup": "^1.0.0",
+    "jquery": "^3.6.1",
+    "kill-port": "^2.0.1",
+    "ng2-charts": "^4.1.1",
+    "ngc-esbuild": "^0.0.75",
+    "pug": "^3.0.2",
+    "rxjs": "~7.5.0",
+    "socket.io-client": "^4.5.2",
+    "toastr": "^2.1.4",
+    "tslib": "^2.3.0",
+    "xlsx": "^0.18.5",
+    "zone.js": "~0.11.4"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^15.0.4",
+    "@angular/cli": "~15.0.4",
+    "@angular/compiler-cli": "^15.0.4",
+    "@types/jasmine": "~4.0.0",
+    "electron": "22.0.3",
+    "electron-builder": "^23.6.0",
+    "jasmine-core": "~4.3.0",
+    "karma": "~6.4.0",
+    "karma-chrome-launcher": "~3.1.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "~2.0.0",
+    "typescript": "~4.8.2"
+  },
+  "build": {
+    "appId": "com.season.cellytics_nk",
+    "productName": "Cellytics-NK",
+    "extends": null,
+    "win": {
+      "target": "nsis",
+      "icon": "assets/images/icon/logo.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": true,
+      "language": 1042,
+      "include": "public/installer.nsh",
+      "shortcutName": "Cellytics-NK",
+      "uninstallDisplayName": "Cellytics-NK"
+    },
+    "files": [
+      "public/*",
+      "dist/build/*",
+      "package.json",
+      "assets/**/*",
+      "assets/**/*.exe",
+      "assets/**/*.msi"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    }
+  }
+}

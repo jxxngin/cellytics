@@ -1,0 +1,14 @@
+{
+    "package": "electron",
+    "title": "Electron",
+    "version": "0.1.0",
+    "repo": "https://git.imurukevol.kr/ImuruKevol/wiz-electron",
+    "use_libs": true,
+    "use_route": false,
+    "use_app": true,
+    "use_styles": false,
+    "use_assets": false,
+    "use_model": false,
+    "use_sample": false,
+    "description": "wiz electron portal framework"
+}

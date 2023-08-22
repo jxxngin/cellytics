@@ -1,0 +1,22 @@
+{
+    "mode": "page",
+    "id": "page.start",
+    "title": "/start",
+    "namespace": "start",
+    "viewuri": "/start",
+    "category": "general",
+    "preview": "/start",
+    "controller": "",
+    "layout": "layout.aside",
+    "ng.build": {
+        "id": "page.start",
+        "name": "PageStartComponent",
+        "path": "./page.start/page.start.component"
+    },
+    "ng": {
+        "selector": "wiz-page-start",
+        "inputs": [],
+        "outputs": []
+    },
+    "template": "wiz-page-start()"
+}

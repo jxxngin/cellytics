@@ -1,0 +1,28 @@
+{
+    "mode": "component",
+    "id": "component.input",
+    "title": "Input",
+    "namespace": "input",
+    "viewuri": "/login",
+    "category": "public",
+    "controller": "",
+    "ng.build": {
+        "id": "component.input",
+        "name": "ComponentInputComponent",
+        "path": "./component.input/component.input.component"
+    },
+    "ng": {
+        "selector": "wiz-component-input",
+        "inputs": [
+            "label",
+            "type",
+            "model",
+            "disabled"
+        ],
+        "outputs": [
+            "modelChange",
+            "enter"
+        ]
+    },
+    "template": "wiz-component-input([label]=\"\", [type]=\"\", [model]=\"\", [disabled]=\"\", (modelChange)=\"\", (enter)=\"\")"
+}

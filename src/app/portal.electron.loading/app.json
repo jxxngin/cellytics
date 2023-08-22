@@ -1,0 +1,19 @@
+{
+    "mode": "portal",
+    "id": "portal.electron.loading",
+    "title": "Loading",
+    "namespace": "electron.loading",
+    "viewuri": "",
+    "category": "",
+    "template": "wiz-portal-electron-loading()",
+    "ng.build": {
+        "id": "portal.electron.loading",
+        "name": "PortalElectronLoadingComponent",
+        "path": "./portal.electron.loading/portal.electron.loading.component"
+    },
+    "ng": {
+        "selector": "wiz-portal-electron-loading",
+        "inputs": [],
+        "outputs": []
+    }
+}

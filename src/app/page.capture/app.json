@@ -1,0 +1,22 @@
+{
+    "mode": "page",
+    "id": "page.capture",
+    "title": "/capture",
+    "namespace": "capture",
+    "viewuri": "/capture",
+    "category": "",
+    "preview": "/capture",
+    "controller": "",
+    "layout": "layout.aside",
+    "ng.build": {
+        "id": "page.capture",
+        "name": "PageCaptureComponent",
+        "path": "./page.capture/page.capture.component"
+    },
+    "ng": {
+        "selector": "wiz-page-capture",
+        "inputs": [],
+        "outputs": []
+    },
+    "template": "wiz-page-capture()"
+}

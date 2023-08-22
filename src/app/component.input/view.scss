@@ -1,0 +1,67 @@
+.underline-text-input-group {
+    position: relative;
+    padding: 15px 0 0;
+    width: 100%;
+
+    input {
+        line-height: 36px;
+    }
+
+    .underline-text-input-label {
+        position: absolute;
+        top: 0;
+        display: block;
+        transition: 0.2s;
+        font-size: 15px;
+        color: black;
+        font-weight: 700;
+    }
+
+    .underline-text-input-field {
+        width: 100%;
+        border: 0;
+        border-bottom: 2px solid black;
+        outline: 0;
+        font-size: 18px;
+        color: black;
+        padding: 7px 0;
+        background: transparent;
+        transition: border-color 0.2s;
+
+        &::placeholder {
+            font-size: 13px;
+            color: transparent;
+        }
+
+        &:placeholder-shown~.underline-text-input-label {
+            font-size: 18px;
+            cursor: text;
+            top: 20px;
+            color: black;
+        }
+    }
+
+    .underline-text-input-field:focus {
+        ~.underline-text-input-label {
+            position: absolute;
+            top: 0;
+            display: block;
+            transition: 0.2s;
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        padding-bottom: 6px;
+        font-weight: 700;
+        border-width: 3px;
+    }
+
+    /* reset input */
+    .underline-text-input-field {
+
+        &:required,
+        &:invalid {
+            box-shadow: none;
+        }
+    }
+}

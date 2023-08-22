@@ -1,0 +1,10 @@
+.main.d-flex.h-100.flex-column
+    wiz-component-logo(style="width: 100%;")
+    .show
+        .title
+            h2 Welcome to Cellytics NK
+        .d-flex.flex-row.mb-5
+            .mode(*ngFor="let item of mode;")
+                button.btn.btn-normal(routerLink="{{item.url}}")
+                    img(src="{{item.img}}")
+                    span {{item.name}}

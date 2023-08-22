@@ -1,0 +1,205 @@
+// #cmos-cam {
+//     position: absolute;
+//     width: calc(100% - 70px);
+//     top: 50%;
+//     transform: translate(20px, -50%);
+// }
+
+.page {
+    position: relative;
+}
+
+.modal-page {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    display: none;
+
+    .modal-view {
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        box-shadow: 0px 3px 26px #00000026;
+        border-radius: 20px;
+        display: flex;
+        padding: 20px;
+        position: absolute;
+        width: 50%;
+        height: auto;
+        z-index: 2;
+        flex-direction: column;
+        top: 30%;
+        left: 25%;
+
+        .modal-view-header {
+            display: flex;
+            padding: 10px;
+            border-bottom: 2px solid #E6E7E9;
+
+            .title {
+                font-size: 25px;
+                font-weight: bold;
+            }
+        }
+
+        .modal-view-body {
+            display: flex;
+            flex-direction: column;
+            padding: 30px 10px;
+
+            .name {
+                display: flex;
+                flex-direction: row;
+            }
+
+            input {
+                width: 100%;
+                height: 40px;
+            }
+        }
+
+        .modal-view-footer {
+            padding: 10px;
+            padding-bottom: 0px;
+            border-top: 2px solid #E6E7E9;
+
+            button {
+                margin-top: 8px;
+                float: right;
+            }
+        }
+    }
+}
+
+.cam {
+    width: 67%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+
+    .item {
+        height: 5%;
+        align-items: left;
+    }
+
+    #cmos-cam {
+        height: 95%;
+        align-items: center;
+        justify-content: center;
+        object-fit: contain;
+    }
+}
+
+.opt-menu {
+    width: 33%;
+    padding: 10px;
+    margin-left: 10px;
+
+    &>.card {
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        box-shadow: 0px 3px 26px #DDDDDD;
+        border-radius: 20px;
+        opacity: 1;
+        padding: 20px;
+
+        .option {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+
+            .range {
+                height: 48px;
+                width: 85%;
+                display: flex;
+                align-items: center;
+            }
+
+            p {
+                font: normal normal bold 14px/20px MAIN-N;
+                margin-bottom: 0px;
+                letter-spacing: 0px;
+                color: #000000;
+                opacity: 1;
+            }
+        }
+
+        .mode-option {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .title {
+            font: normal normal normal 14px/20px MAIN-N;
+            letter-spacing: 0px;
+            color: #000000;
+            opacity: 1;
+            margin-bottom: 5px;
+        }
+
+        .name {
+            background: var(--unnamed-color-f7f7f7) 0% 0% no-repeat padding-box;
+            background: #F7F7F7 0% 0% no-repeat padding-box;
+            border-radius: 5px;
+            opacity: 1;
+            border: 0px;
+
+            padding: 10px 14px;
+            font: normal normal bold 14px/20px MAIN-N;
+            letter-spacing: 0px;
+            color: #000000;
+        }
+
+        .option span {
+            text-align: left;
+            font: normal normal bold 14px/20px MAIN-N;
+            letter-spacing: 0px;
+            color: #000000;
+            opacity: 1;
+
+            background: var(--unnamed-color-f7f7f7) 0% 0% no-repeat padding-box;
+            background: #F7F7F7 0% 0% no-repeat padding-box;
+            border-radius: 5px;
+            padding: 10px 14px;
+        }
+    }
+
+    .button {
+        border-radius: 15px;
+        font-weight: bold;
+        font-size: 20px;
+    }
+}
+
+.btn-secondary {
+    width: 110px;
+    height: 40px;
+    margin-top: 7px;
+}
+
+.calibration {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    .form-control {
+        width: 65px;
+        height: 30px;
+    }
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 5px;
+    border-radius: 20px;
+    background-color: #DDDDDD;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    width: 16px;
+    height: 16px;
+    border-radius: 100%;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border: 2px solid #D6000F;
+}

@@ -1,0 +1,19 @@
+{
+    "mode": "component",
+    "id": "component.logo",
+    "title": "\ub85c\uace0",
+    "namespace": "logo",
+    "viewuri": "",
+    "category": "",
+    "ng.build": {
+        "id": "component.logo",
+        "name": "ComponentLogoComponent",
+        "path": "./component.logo/component.logo.component"
+    },
+    "ng": {
+        "selector": "wiz-component-logo",
+        "inputs": [],
+        "outputs": []
+    },
+    "template": "wiz-component-logo()"
+}

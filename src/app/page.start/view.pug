@@ -1,0 +1,23 @@
+.page
+    wiz-component-logo(style="width: 100%;")
+    .show
+        .view
+            .view-header
+                .col
+                    h3.title START
+                .col-auto
+                    button.btn.btn-close(routerLink="/main")
+            .view-body.flex-grow-1
+                .name
+                    .col-md-3.d-flex.align-items-center
+                        h4.mb-0 NAME
+                    .col 
+                        input.form-control#new(
+                            type="text",
+                            [(ngModel)]="name",
+                            (keydown.enter)="capture(name)",
+                            placeholder="이름을 입력하세요",
+                        )
+            .view-footer
+                button.col-auto.btn.btn-none((click)="capture(name)") NEW
+        

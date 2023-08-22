@@ -1,0 +1,104 @@
+.view {
+    flex-direction: column !important;
+}
+
+.item {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.line {
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid #EAEAEA;
+}
+
+.blank {
+    width: 100%;
+    flex: 1;
+}
+
+.result {
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    background-color: #F7F7F7;
+    border-radius: 20px;
+
+    .title {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .result-detail {
+        height: 100%;
+        padding: 30px;
+        margin-right: 30px;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        border-radius: 20px;
+
+        .check {
+            width: 24px;
+            height: 24px;
+            background-color: #FFE6E8;
+            border-radius: 999px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            i {
+                color: #B81D24;
+            }
+        }
+
+        .bold {
+            margin-left: 5px;
+            font-weight: bold;
+        }
+
+        .highlight {
+            margin-left: 5px;
+            font-weight: bold;
+            color: #B81D24;
+        }
+
+        .show {
+            width: 100%;
+            padding: 30px 20px 30px 20px;
+            background-color: #B7B7B7;
+            border-radius: 20px;
+
+            .spectrum {
+                position: relative;
+                height: 40px;
+                border-radius: 20px;
+                background: linear-gradient(90deg, rgba(255, 0, 0, 1) 0%, rgba(255, 255, 0, 1) 50%, rgba(0, 255, 0, 1) 100%);
+
+                .point-top {
+                    position: absolute;
+                    top: -15px;
+                }
+
+                .point-bottom {
+                    position: absolute;
+                    top: 34px;
+                }
+
+                .bar {
+                    position: absolute;
+                    height: 40px;
+                    border: 1px solid black;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,133 @@
+@import "portal/season/core";
+@import "styles/font/suit";
+
+app-root {
+    font-family: 'MAIN-N';
+}
+
+.window-draggable {
+    -webkit-app-region: drag;
+    -webkit-user-drag: none;
+}
+
+.page {
+    background: var(--unnamed-color-f7f7f7) 0% 0% no-repeat padding-box;
+    background: #F7F7F7 0% 0% no-repeat padding-box;
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.view {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 26px #00000026;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    width: 90%;
+    height: 85%;
+}
+
+button.btn.btn-none {
+    background-color: black;
+    padding: 10px 20px;
+    color: white;
+    font-family: 'MAIN-N';
+}
+
+button.btn.btn-none:hover {
+    background: var(--unnamed-color-b81d24) 0% 0% no-repeat padding-box;
+    background: #B81D24 0% 0% no-repeat padding-box;    
+}
+
+button.btn.btn-show {
+    background: #B81D24 0% 0% no-repeat padding-box;
+    padding: 10px 20px;
+    color: white;
+    font-family: 'MAIN-N'
+}
+
+button.btn.btn-show:active,
+button.btn.btn-none:active,
+button.btn.btn-outline:active,
+button.btn:active,
+button.btn.btn-outline.col-auto:active {
+    color: #B81D24;
+    background-color: var(--tblr-btn-active-bg);
+    border-color: #B81D24;
+}
+
+.th-start {
+    border-radius: 10px 0px 0px 0px;
+    border-bottom: none;
+}
+
+.th-end {
+    border-radius: 0px 10px 0px 0px;
+    border-bottom: none;
+}
+
+th.text-center.col-md-1, th.text-center.col-md-2 {
+    background: var(--unnamed-color-dddddd) 0% 0% no-repeat padding-box;
+    background: #DDDDDD 0% 0% no-repeat padding-box;
+    font: normal normal normal 12px/14px MAIN-N;
+    color: #5E5E5E;
+}
+
+td.text-center, td {
+    border-bottom: 1px solid #EAEAEA;
+    font: normal normal medium 12px/14px MAIN-N;
+    color: #413C3C;
+}
+
+span, input {
+    font-family: 'MAIN-N';
+}
+
+$color: #25d590;
+$color-dark: #19335a;
+$color-light: #ccffeb;
+
+.item-card {
+    position: relative;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #B1B3B5;
+    border: 0;
+
+    .title {
+        font-weight: bold;
+        color: $color-dark;
+        line-height: 26px;
+        font-size: 22px;
+    }
+}
+
+.item-card + .item-card {
+    margin-top: 6px;
+}
+
+.mtd {
+    margin-top: 6px !important;
+}
+
+.form-control.custom {
+    box-shadow: none !important;
+    border-color: darkgreen !important;
+    border-radius: 15px;
+}
+
+.btn-dark.custom {
+    border-radius: 15px;
+    background-color: $color-dark;
+    font-weight: bold;
+}
+
+.btn-success.custom {
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 20px;
+}

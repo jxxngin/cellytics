@@ -1,0 +1,62 @@
+.page.h-100
+    wiz-component-logo(style="width: 100%;")
+    // .view-loading(*ngIf="service.loading.isshow", style="position: absolute; z-index: 3; top: 67px;")
+    //     wiz-portal-season-loading-hexa
+    .view
+        .main.mr-2.h-100.flex-grow-1
+            .item-card.h-100
+                .result-canvas.d-flex.align-items-center.justify-content-center
+                    canvas#result-chart
+                    img#result-img(crossOrigin="anonymous")
+                    canvas#count-box
+                .item.mt-4
+                    .option
+                        strong Name
+                        .option-name.d-flex
+                            span.col {{result.name}}
+                            button.btn.btn-none((click)="toggleImgVis()", style="width: 85px;") {{imgVis}}
+                            button.col-auto.btn.btn-show(style="text-transform: uppercase; width: 95px; cursor: default !important;") {{result.mode}}
+                    .option
+                        strong Concentration
+                        span {{result.tc.toLocaleString()}} cells/mL
+                    .option
+                        strong Count
+                        span {{result.total}} cells
+                    
+        .sub.ml-2.h-100.d-flex.flex-column(style="width: 500px;")
+            .item-card.flex-grow-1.d-flex.flex-column
+                div
+                    .item.mb-3.d-flex.flex-row-reverse.align-items-center
+                        span.flex-grow-1.text-right {{result.date}}
+                        button.btn.btn-outline(routerLink="/history/result")
+                            i.fa-regular.fa-circle-check
+                            span.ml-2 Result
+                        button.btn.btn-outline.mr-1(routerLink="/history")
+                            i.fa-solid.fa-bars
+                            span.ml-2 List
+                    .item.justify-content-between.d-flex.align-items-center
+                        strong.col Parameter
+                        button.btn.btn-none.col-auto((click)="download()") 
+                            i.fa-solid.fa-download
+                            span.ml-2 Download
+
+                    .result-page.d-flex
+                        .show.col.pr-2
+                            .result(*ngFor = "let item of param")
+                                strong {{item.name}}
+                                span {{item.result}}
+                        .show.col.pl-2
+                            .result(*ngFor = "let item of param2")
+                                strong {{item.name}}
+                                span {{item.result}}
+                .mt-auto.d-flex
+                    span.flex-grow-1.text-right ( {{idx + 1}} / {{save}} )
+
+            .item.mt-3
+                button.btn.btn-none.w-50.detail-btn((click)="prev()", [disabled]="idx <= 0")
+                    i.fa-solid.fa-chevron-left
+                    span.ml-2 Prev
+                button.btn.btn-none.w-50.detail-btn((click)="next()", [disabled]="idx >= save - 1")
+                    span.mr-2 Next
+                    i.fa-solid.fa-chevron-right
+            

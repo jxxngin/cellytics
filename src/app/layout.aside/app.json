@@ -1,0 +1,18 @@
+{
+    "title": "Aside",
+    "mode": "layout",
+    "namespace": "aside",
+    "category": "theme",
+    "id": "layout.aside",
+    "ng.build": {
+        "id": "layout.aside",
+        "name": "LayoutAsideComponent",
+        "path": "./layout.aside/layout.aside.component"
+    },
+    "ng": {
+        "selector": "wiz-layout-aside",
+        "inputs": [],
+        "outputs": []
+    },
+    "template": "wiz-layout-aside()"
+}

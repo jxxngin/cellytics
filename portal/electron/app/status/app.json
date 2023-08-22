@@ -1,0 +1,9 @@
+{
+    "mode": "portal",
+    "id": "status",
+    "title": "Status",
+    "namespace": "status",
+    "viewuri": "",
+    "category": "",
+    "template": "wiz-portal-electron-status([title]=\"\")"
+}

@@ -1,0 +1,51 @@
+.wiz-aside-page {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: var(--wiz-color-background);
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
+
+    .wiz-content {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        height: 100%;
+
+        .wiz-top-menu {
+            display: flex;
+            height: 32px;
+            text-align: right;
+            align-items: center;
+            border-bottom: 1px solid var(--wiz-color-border);
+            color: var(--wiz-color-text);
+            background: #fff;
+
+            .dropdown {
+                .btn {
+                    height: 20px;
+                    font-size: 13px;
+                }
+
+                .dropdown-menu-arrow:before {
+                    left: unset;
+                    right: 0.75rem !important;
+                }
+            }
+        }
+
+        .wiz-view {
+            flex: auto;
+            overflow: auto;
+            height: 0;
+        }
+    }
+}
+
+.block-page {
+    background-color: rgba($color: black, $alpha: 0.1);
+}

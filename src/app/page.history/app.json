@@ -1,0 +1,22 @@
+{
+    "mode": "page",
+    "id": "page.history",
+    "title": "/history",
+    "namespace": "history",
+    "viewuri": "/history",
+    "category": "general",
+    "preview": "/history",
+    "controller": "",
+    "layout": "layout.aside",
+    "ng.build": {
+        "id": "page.history",
+        "name": "PageHistoryComponent",
+        "path": "./page.history/page.history.component"
+    },
+    "ng": {
+        "selector": "wiz-page-history",
+        "inputs": [],
+        "outputs": []
+    },
+    "template": "wiz-page-history()"
+}

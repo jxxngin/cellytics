@@ -1,0 +1,22 @@
+{
+    "mode": "page",
+    "id": "page.history.result",
+    "title": "/history/result",
+    "namespace": "history.result",
+    "viewuri": "/history/result",
+    "category": "",
+    "preview": "/history/result",
+    "controller": "",
+    "layout": "layout.aside",
+    "ng.build": {
+        "id": "page.history.result",
+        "name": "PageHistoryResultComponent",
+        "path": "./page.history.result/page.history.result.component"
+    },
+    "ng": {
+        "selector": "wiz-page-history-result",
+        "inputs": [],
+        "outputs": []
+    },
+    "template": "wiz-page-history-result()"
+}

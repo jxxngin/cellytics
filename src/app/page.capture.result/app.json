@@ -1,0 +1,22 @@
+{
+    "mode": "page",
+    "id": "page.capture.result",
+    "title": "/capture/result",
+    "namespace": "capture.result",
+    "viewuri": "/capture/result",
+    "category": "",
+    "preview": "/capture/result",
+    "controller": "",
+    "layout": "layout.aside",
+    "ng.build": {
+        "id": "page.capture.result",
+        "name": "PageCaptureResultComponent",
+        "path": "./page.capture.result/page.capture.result.component"
+    },
+    "ng": {
+        "selector": "wiz-page-capture-result",
+        "inputs": [],
+        "outputs": []
+    },
+    "template": "wiz-page-capture-result()"
+}

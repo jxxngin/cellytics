@@ -1,0 +1,20 @@
+{
+    "mode": "component",
+    "id": "component.nav.aside",
+    "title": "\uc0ac\uc774\ub4dc \ub124\ube44\uac8c\uc774\uc158",
+    "namespace": "nav.aside",
+    "viewuri": "",
+    "category": "\uacf5\uc6a9\ucef4\ud3ec\ub10c\ud2b8",
+    "controller": "",
+    "ng.build": {
+        "id": "component.nav.aside",
+        "name": "ComponentNavAsideComponent",
+        "path": "./component.nav.aside/component.nav.aside.component"
+    },
+    "ng": {
+        "selector": "wiz-component-nav-aside",
+        "inputs": [],
+        "outputs": []
+    },
+    "template": "wiz-component-nav-aside()"
+}

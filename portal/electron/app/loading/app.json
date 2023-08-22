@@ -1,0 +1,9 @@
+{
+    "mode": "portal",
+    "id": "loading",
+    "title": "Loading",
+    "namespace": "loading",
+    "viewuri": "",
+    "category": "",
+    "template": "wiz-portal-electron-loading()"
+}

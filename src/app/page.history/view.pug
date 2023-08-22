@@ -1,0 +1,28 @@
+.page
+    wiz-component-logo(style="width: 100%;")
+    .view
+        .button
+            button.btn.btn-outline(routerLink="/main")
+                i.fa-solid.fa-chevron-left
+                span.ml-2 Back
+        
+        .list.h-100
+            table.table.table-hover.m-0
+                thead
+                    tr
+                        th.th-start.text-center.col-md-1 name
+                        // th.text-center.col-md-1 vehicle
+                        // th.text-center.col-md-1 asc
+                        th.text-center.col-md-1 result
+                        th.text-center.col-md-1 date
+                        th.th-end.text-center.col-md-1 detail
+                tbody
+                    tr(*ngFor="let item of list")
+                        td.text-center {{item.username}}
+                        // td.text-center {{item.show.vehicle ? item.show.vehicle.toFixed(3) : 0}}
+                        // td.text-center {{item.show.asc ? item.show.asc.toFixed(3) : 0}}
+                        td.text-center {{item.show.result ? item.show.result.toFixed(3) : 0}}
+                        td.text-center {{item.date}}
+                        td.text-center
+                            button.btn.btn-none((click)="result(item.id)") Enter
+                    

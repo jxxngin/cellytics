@@ -1,0 +1,9 @@
+{
+    "mode": "portal",
+    "id": "package.json",
+    "title": "package.json",
+    "namespace": "package.json",
+    "viewuri": "",
+    "category": "",
+    "template": "wiz-portal-electron-package-json([title]=\"\")"
+}

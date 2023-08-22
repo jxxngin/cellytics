@@ -1,0 +1,114 @@
+.page
+    wiz-component-logo(style="width: 100%;")
+
+    .modal-page
+        .modal-view
+            .modal-view-header
+                .col
+                    h3.title Edit Your Name
+                .col-auto
+                    button.btn.btn-close((click)="notEdit()")
+            .modal-view-body.flex-grow-1
+                .name
+                    .col-md-3.d-flex.align-items-center
+                        h4.mb-0 USER NAME
+                    .col 
+                        input.form-control#input(
+                            type="text",
+                            [(ngModel)]="username",
+                            (keydown.enter)="editName(username)",
+                            placeholder="이름을 입력하세요",
+                        )
+            .modal-view-footer
+                button.col-auto.btn.btn-none((click)="editName(username)") EDIT
+                
+    .view
+        .cam
+            .item.mb-2
+                button.btn.btn-outline((click)="back()")
+                    i.fa-solid.fa-chevron-left
+                    span.ml-2 Back
+                button.btn.btn-none((click)="showName()", style="float: right;")
+                    span Name
+            img#cmos-cam(
+                *ngIf="src",
+                [src]="src",
+                crossOrigin="anonymous",
+            )
+        .opt-menu.col-3
+            .card.h-100
+                .option
+                    strong.title Name
+                    .option-name.d-flex
+                        input.col.name(type="text", placeholder="Name", [(ngModel)]="name")
+                        button.col-auto.btn.btn-show((click)="setMode()", style="text-transform: uppercase; width: 95px;") {{mode}}
+                .option
+                    strong.title Background Average
+                    span {{option.bgavg}}
+                .option
+                    strong.title LED Brightness
+                    span(*ngIf="!cal") {{option.led}}
+                    .calibration(*ngIf="cal")
+                        // input.form-control.mr-2(
+                        //     type="number",
+                        //     min="1",
+                        //     max="255",
+                        //     [disabled]="disabled",
+                        //     [(ngModel)]="option.led",
+                        //     (ngModelChange)="change()",
+                        // )
+                        .range
+                            button.btn.btn-sm.btn-white.mr-1((click)="setLed(option.led - 1)")
+                                i.fa-solid.fa-chevron-left
+                            input.form-range(
+                                type="range",
+                                min="1",
+                                max="255",
+                                [ngClass]="'percentage-'+Math.round(option.led / 255 * 100)",
+                                [disabled]="disabled",
+                                [(ngModel)]="option.led",
+                                (ngModelChange)="change()",
+                            )
+                            button.btn.btn-sm.btn-white.ml-1((click)="setLed(option.led + 1)")
+                                i.fa-solid.fa-chevron-right
+                        p {{option.led}}
+                .option
+                    strong.title Threshold
+                    span(*ngIf="!cal") {{option.threshold}}
+                    .calibration(*ngIf="cal")
+                        // input.form-control.mr-2(
+                        //     type="number",
+                        //     min="1",
+                        //     max="100",
+                        //     [disabled]="disabled",
+                        //     [(ngModel)]="option.threshold",
+                        // )
+                        .range
+                            button.btn.btn-sm.btn-white.mr-1((click)="setTh(option.threshold - 1)")
+                                i.fa-solid.fa-chevron-left
+                            input.form-range(
+                                type="range",
+                                min="1",
+                                max="100",
+                                [disabled]="disabled",
+                                [(ngModel)]="option.threshold",
+                                (change)="setTh(option.threshold)",
+                            )
+                            button.btn.btn-sm.btn-white.ml-1((click)="setTh(option.threshold + 1)")
+                                i.fa-solid.fa-chevron-right
+                        p {{option.threshold}}
+                .option(*ngIf="!cal")
+                    strong.title 저장한 이미지
+                    span.d-flex
+                        p.col Vehicle - {{store.capture.vehicle}}
+                        p.col ASC - {{store.capture.asc}}
+                    // span {{store.capture.save}}
+            
+                .mt-auto(*ngIf="!cal")
+                    // button.btn.btn-none((click)="check()", style="float: right;") Capture
+                    button.btn.btn-none.w-50((click)="onCal()") Calibration
+                    button.btn.btn-none.w-50((click)="check()") Capture
+                    button.btn.btn-none.w-100.mt-2((click)="finish()", [disabled]="store.capture.save <= 0") Finish
+
+                .mt-auto(*ngIf="cal")
+                    button.btn.btn-none.w-100((click)="onCal()") OK

@@ -1,0 +1,92 @@
+$width: 125px;
+$radius: 15px;
+
+img {
+    height: 100%;
+}
+
+aside.navbar-vertical.navbar-expand-lg {
+    display: flex;
+    position: relative;
+    width: $width;
+    height: 100%;
+    overflow: hidden;
+    flex-direction: column;
+    padding: 5px;
+    border-left: 2px solid lightgray;
+
+    .bg {
+        inset: 10px;
+    }
+
+    .navbar-brand-container {
+        width: 100%;
+        display: flex;
+        text-align: center;
+        margin-top: 15px;
+
+        .navbar-brand {
+            flex: auto;
+        }
+    }
+
+    .patient-info {
+        width: 100%;
+        padding: 0 15px;
+        font-size: 16px;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        width: 100%;
+        padding: 5px;
+        padding-bottom: 15px;
+
+        &-item {
+            position: relative;
+            text-align: center;
+            border-radius: $radius;
+            padding: 4px;
+            margin-left: 7px;
+            margin-right: 7px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .current {
+                display: none;
+            }
+
+            &.active,
+            &:hover {
+                .normal {
+                    display: none;
+                }
+
+                .current {
+                    display: block;
+                }
+            }
+
+            &-bg {
+                width: 100%;
+                height: 100%;
+                box-shadow: -1px 1px 10px 4px #ddd;
+                border-radius: 15px;
+            }
+            &-bg + .z-2 {
+                color: white;
+                margin-top: 4px;
+            }
+        }
+
+        .menu-item + .menu-item {
+            margin-top: 8px;
+        }
+    }
+}
